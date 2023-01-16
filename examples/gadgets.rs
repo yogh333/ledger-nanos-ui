@@ -30,7 +30,7 @@ extern "C" fn sample_main() {
 
     ui::clear_screen();
 
-    ["First", "Second"].place(Location::Middle, Layout::Centered, false);
+    /*["0x07e00d496e324876","bbc8531f2d9a82bf", "154d1a04a50218ee", "74cdd372f75a551a"].place(Location::Middle, Layout::Centered, false);
     wait_any();
     ui::clear_screen();
 
@@ -38,10 +38,10 @@ extern "C" fn sample_main() {
     wait_any();
     ui::clear_screen();
 
-    ["First Line", "Second Line", "Third Line", "Fourth"].place(
+    ["First Line", "Second Line", "Third Line", "Fourth", "Fifth", "Sixth"].place(
         Location::Middle,
         Layout::Centered,
-        false,
+        true,
     );
     wait_any();
     ui::clear_screen();
@@ -87,9 +87,10 @@ extern "C" fn sample_main() {
     }
 
     let _ = ui::Validator::new("Confirm?").ask();
+    */
     let _ = ui::MessageValidator::new(
-        &[&"Message Review"],
-        &[&"Confirm", &"message?"],
+        &[&"Account:", &"0x07e00d496e324876",&"bbc8531f2d9a82bf", &"154d1a04a50218ee", &"74cdd372f75a551a"],
+        &[&"Confirm"],
         &[&"Cancel"],
     )
     .ask();
