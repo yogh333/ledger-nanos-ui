@@ -154,7 +154,7 @@ impl<'a> MessageValidator<'a> {
 
     pub fn ask(&self) -> bool {
         clear_screen();
-        let page_count = 3; //&self.message.len() + 2;
+        let page_count = &self.message.len() + 2;
         let mut cur_page = 0;
 
         let draw_icon_and_text = |icon: Icon, strings: &[&str]| {
@@ -183,7 +183,7 @@ impl<'a> MessageValidator<'a> {
             } else if page == page_count - 1 {
                 draw_icon_and_text(CROSS_ICON, &self.cancel);
             } else {
-                self.message.place(Location::Middle, Layout::Centered, false);
+                self.message[page].place(Location::Middle, Layout::Centered, false);
                 RIGHT_ARROW.display();
             }
             if page > 0 {
