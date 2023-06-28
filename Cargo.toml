@@ -5,7 +5,8 @@ authors = ["yhql"]
 edition = "2021"
 
 [dependencies]
-nanos_sdk = { git = "https://github.com/yogh333/ledger-nanos-sdk.git", branch="feat/libcall_support"}
+#nanos_sdk = { git = "https://github.com/yogh333/ledger-nanos-sdk.git", branch="feat/libcall_support"}
+nanos_sdk = { path = "../ledger-nanos-sdk" }
 include_gif = { git = "https://github.com/LedgerHQ/sdk_include_gif" }
 
 [features]
@@ -20,3 +21,4 @@ flags = "0"
 icon = "ui_16x16.gif"
 icon_small = "ui_14x14.gif"
 path = [""]
+api_level = "1"
