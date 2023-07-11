@@ -7,7 +7,8 @@ edition = "2021"
 [dependencies]
 #nanos_sdk = { git = "https://github.com/yogh333/ledger-nanos-sdk.git", branch="feat/libcall_support"}
 nanos_sdk = { path = "../ledger-nanos-sdk" }
-include_gif = { git = "https://github.com/LedgerHQ/sdk_include_gif" }
+#include_gif = { git = "https://github.com/LedgerHQ/sdk_include_gif" }
+include_gif = { path = "../sdk_include_gif" }
 
 [features]
 speculos = ["nanos_sdk/speculos"]
